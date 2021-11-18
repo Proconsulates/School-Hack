@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>My.PPS</title>
+</head>
+
+<body>
+    <iframe id="iframe" src="https://www.bing.com/?toWww=1&redig=CFAD98CD42D94926AFAD6FFDDABDBFA7"
+        style="height:100vh;width:100%"></iframe>
+
+    <button id="open">Open Modal</button>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img src="haha.png" width="100%;" height="100%">
+        </div>
+
+    </div>
+
+    <script>
+        var modal = document.getElementById("modal");
+
+        var btn = document.getElementById("open");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
